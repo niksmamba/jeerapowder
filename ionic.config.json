@@ -1,0 +1,7 @@
+{
+  "name": "jeeraPowderStarter",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
