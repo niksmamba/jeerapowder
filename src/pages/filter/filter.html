@@ -1,0 +1,99 @@
+<!--
+  Generated template for the FilterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Filters</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="closeFilters()">
+          <ion-icon name="arrow-round-back" ></ion-icon>
+      </button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-header>
+          Select Price Range
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item>
+            <ion-range [(ngModel)]="priceRange">
+              <ion-icon range-left small name="cash"></ion-icon>
+              <ion-icon range-right name="cash"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-header>
+            Other Filters
+          </ion-card-header>
+          <ion-card-content>
+              <ion-list>
+                  <ion-item>
+                    <ion-label>Speciality</ion-label>
+                    <ion-select [(ngModel)]="speciality">
+                      <ion-option value="nv">Non-Veg</ion-option>
+                      <ion-option value="v">Veg</ion-option>
+                    </ion-select>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label>Average Rating</ion-label>
+                    <ion-select [(ngModel)]="rating" interface="popover">
+                        <ion-option value="a5">Above 5</ion-option>
+                        <ion-option value="a4">Above 4</ion-option>
+                        <ion-option value="a3">Above 3</ion-option>
+                        
+                      </ion-select>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label>Dessert Rating</ion-label>
+                    <ion-select [(ngModel)]="rating_d" interface="popover">
+                        <ion-option value="da5">Above 5</ion-option>
+                        <ion-option value="da4">Above 4</ion-option>
+                        <ion-option value="da3">Above 3</ion-option>
+                        
+                      </ion-select>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label>Main Course Rating</ion-label>
+                      <ion-select [(ngModel)]="rating_m" interface="popover">
+                          <ion-option value="ma5">Above 5</ion-option>
+                          <ion-option value="ma4">Above 4</ion-option>
+                          <ion-option value="ma3">Above 3</ion-option>
+                          
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Starters Rating</ion-label>
+                        <ion-select [(ngModel)]="rating_s" interface="popover">
+                            <ion-option value="sa5">Above 5</ion-option>
+                            <ion-option value="sa4">Above 4</ion-option>
+                            <ion-option value="sa3">Above 3</ion-option>
+                            
+                          </ion-select>
+                      </ion-item>
+              
+                  
+                </ion-list>
+          </ion-card-content>
+        </ion-card>
+      <ion-footer><button ion-button full bottom>Apply Filters</button></ion-footer>
+      
+
+    
+
+</ion-content>
