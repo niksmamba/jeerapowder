@@ -10,13 +10,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SelectChefPage } from '../pages/select-chef/select-chef';
 import { HttpClientModule } from '@angular/common/http';
+import { ChefProfilePage } from '../pages/chef-profile/chef-profile';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    SelectChefPage
+    SelectChefPage,
+    ChefProfilePage
+
 
   ],
   imports: [
@@ -30,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MyApp,
     HomePage,
     ListPage,
-    SelectChefPage
+    SelectChefPage,
+    ChefProfilePage
   ],
   providers: [
     StatusBar,

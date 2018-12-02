@@ -28,7 +28,7 @@
           </ion-segment-button>
       </ion-segment>
 
-        <ion-card *ngFor="let item of items">
+        <ion-card (click)="navigateToChefProfile(item.id)" *ngFor="let item of items">
 
           <ion-item>
             <ion-avatar item-start>
@@ -43,20 +43,13 @@
           </ion-item>        
           <ion-card-content>
             <p>Best Preperations</p>
-            <ion-list>
+            <ion-list *ngFor="let prep of item.bestPreperations">
                 <button ion-item>
                     <ion-avatar item-start>
                         <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
                       </ion-avatar>
-                  Chicken Butter Masala
+                  {{prep.prepName}}
                 </button>
-            
-                <button ion-item>
-                    <ion-avatar item-start>
-                        <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
-                      </ion-avatar>
-                  Kheer
-                </button>           
               </ion-list>
               <div align="right"><button ion-button small>Quick Book</button></div>
     

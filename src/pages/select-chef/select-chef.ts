@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
-import {Observable } from 'rxjs/observable'
+import {Observable } from 'rxjs/observable';
+import { ChefProfilePage } from '../chef-profile/chef-profile';
 
 
 /**
@@ -43,6 +44,12 @@ export class SelectChefPage {
     console.log('here 2');
     myfilterPage.present();
 
+  }
+
+  navigateToChefProfile(id:string){
+    this.navCtrl.push(ChefProfilePage,{
+      chefId: id
+    })
   }
 
 }
