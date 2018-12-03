@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import {Observable } from 'rxjs/observable';
+import { BookingDetailsPage } from '../booking-details/booking-details';
 
 /**
  * Generated class for the ChefProfilePage page.
@@ -37,6 +38,10 @@ export class ChefProfilePage {
       this.items=result;
       //console.log(result);
     }); 
+  }
+  navigateToBookingPage(){
+    console.log('hi 3');
+    this.navCtrl.push(BookingDetailsPage);
   }
 
 }

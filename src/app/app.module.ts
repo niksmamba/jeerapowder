@@ -11,6 +11,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SelectChefPage } from '../pages/select-chef/select-chef';
 import { HttpClientModule } from '@angular/common/http';
 import { ChefProfilePage } from '../pages/chef-profile/chef-profile';
+import { BookingDetailsPage } from '../pages/booking-details/booking-details';
+import { CostBreakupPage } from '../pages/cost-breakup/cost-breakup';
+import { ConfirmationPage } from '../pages/confirmation/confirmation';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,11 @@ import { ChefProfilePage } from '../pages/chef-profile/chef-profile';
     HomePage,
     ListPage,
     SelectChefPage,
-    ChefProfilePage
-
-
+    ChefProfilePage,
+    BookingDetailsPage,
+    CostBreakupPage,
+    ConfirmationPage
+    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,10 @@ import { ChefProfilePage } from '../pages/chef-profile/chef-profile';
     HomePage,
     ListPage,
     SelectChefPage,
-    ChefProfilePage
+    ChefProfilePage,
+    BookingDetailsPage,
+    CostBreakupPage,
+    ConfirmationPage
   ],
   providers: [
     StatusBar,
