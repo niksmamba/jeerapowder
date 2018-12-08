@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelectChefPage } from '../select-chef/select-chef';
-import { UserInputsPage } from '../user-inputs/user-inputs';
 
 /**
- * Generated class for the SignupPage page.
+ * Generated class for the UserInputsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,22 +11,21 @@ import { UserInputsPage } from '../user-inputs/user-inputs';
 
 @IonicPage()
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html',
+  selector: 'page-user-inputs',
+  templateUrl: 'user-inputs.html',
 })
-export class SignupPage {
-
+export class UserInputsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
+    console.log('ionViewDidLoad UserInputsPage');
   }
 
-  onSignupClick(){
-    //Webservice Code which fetches JP uid
-    this.navCtrl.push(UserInputsPage);
+  searchNearbyChefs(){
+    //some service call code
+    this.navCtrl.push(SelectChefPage);
   }
+
 }

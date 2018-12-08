@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { SelectChefPage } from '../select-chef/select-chef';
 import { ChefProfilePage } from '../chef-profile/chef-profile';
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -12,7 +12,7 @@ import { SignupPage } from '../signup/signup';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private googlePlus: GooglePlus, private http: HttpClient) {
+  constructor(public navCtrl: NavController, private googlePlus: GooglePlus, private http: HttpClient, private modal:ModalController) {
 
   }
 
@@ -58,7 +58,12 @@ export class HomePage {
 
 
     })
+  }
 
+  openOTPinputPanel(){
+    console.log('inside openOTPinputPanel');
+    const myfilterPage=this.modal.create('OtpInputPanelPage');
+    myfilterPage.present();
   }
   
 }
