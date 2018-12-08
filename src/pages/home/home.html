@@ -9,7 +9,11 @@
 
 <ion-content padding>
   
-
+  <button ion-button color="danger" block (click)="loginGoogle()">Google Login</button>
   <button ion-button (click)="ontoggleclick()">Navigate to select chef</button>
-  <!-- <button ion-button (click)="navigateToChefProfile()">Navigate to Chef Profile</button> -->
+
+  <p>Name: {{user.name}}</p>
+  <p>Email: {{user.email}}</p>
+  <p>UserID: {{user.userId}}</p>
+  <img [src] = "user.image" alt="">
 </ion-content>

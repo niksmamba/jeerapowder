@@ -15,6 +15,11 @@ import { BookingDetailsPage } from '../pages/booking-details/booking-details';
 import { CostBreakupPage } from '../pages/cost-breakup/cost-breakup';
 import { ConfirmationPage } from '../pages/confirmation/confirmation';
 
+import { SignupPage } from '../pages/signup/signup';
+
+import { GooglePlus } from '@ionic-native/google-plus';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,14 +29,14 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
     ChefProfilePage,
     BookingDetailsPage,
     CostBreakupPage,
-    ConfirmationPage
+    ConfirmationPage,
+    SignupPage
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
-    
+    IonicModule.forRoot(MyApp)    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,11 +47,13 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
     ChefProfilePage,
     BookingDetailsPage,
     CostBreakupPage,
-    ConfirmationPage
+    ConfirmationPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GooglePlus,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
