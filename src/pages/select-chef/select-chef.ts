@@ -52,4 +52,9 @@ export class SelectChefPage {
     })
   }
 
+  navigateToRoot(){
+    console.log('Navigating to Inputs Page')
+    this.navCtrl.popToRoot();
+  }
+
 }

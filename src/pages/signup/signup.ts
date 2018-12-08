@@ -28,6 +28,6 @@ export class SignupPage {
 
   onSignupClick(){
     //Webservice Code which fetches JP uid
-    this.navCtrl.push(UserInputsPage);
+    this.navCtrl.setRoot(UserInputsPage);
   }
 }
