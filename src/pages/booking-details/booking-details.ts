@@ -26,5 +26,9 @@ export class BookingDetailsPage {
   {
     this.navCtrl.push(CostBreakupPage);
   }
+  navigateToRoot(){
+    console.log('Navigating to Inputs Page')
+    this.navCtrl.popToRoot();
+  }
 
 }

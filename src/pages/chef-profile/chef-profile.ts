@@ -43,5 +43,9 @@ export class ChefProfilePage {
     console.log('hi 3');
     this.navCtrl.push(BookingDetailsPage);
   }
+  navigateToRoot(){
+    console.log('Navigating to Inputs Page')
+    this.navCtrl.popToRoot();
+  }
 
 }
