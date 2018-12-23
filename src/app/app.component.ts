@@ -9,6 +9,7 @@ import { BookingsPage } from '../pages/bookings/bookings';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })

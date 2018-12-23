@@ -21,6 +21,9 @@ import { AboutPage } from '../pages/about/about';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
 import { BookingsPage } from '../pages/bookings/bookings';
 import { UserInputsPage } from '../pages/user-inputs/user-inputs';
+import { GooglePlacesAutocompleteComponentModule } from 'ionic2-google-places-autocomplete';
+
+
 
 
 
@@ -43,7 +46,8 @@ import { UserInputsPage } from '../pages/user-inputs/user-inputs';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    GooglePlacesAutocompleteComponentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

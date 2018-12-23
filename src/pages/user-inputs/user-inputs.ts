@@ -2,12 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SelectChefPage } from '../select-chef/select-chef';
 
-/**
- * Generated class for the UserInputsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+
+
 
 @IonicPage()
 @Component({
@@ -17,15 +14,23 @@ import { SelectChefPage } from '../select-chef/select-chef';
 export class UserInputsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserInputsPage');
   }
 
-  searchNearbyChefs(){
+  searchNearbyChefs() {
     //some service call code
     this.navCtrl.push(SelectChefPage);
   }
 
+  detail(event) {
+    console.log(event);
+    console.log(event.place_id);
+  }
 }
+
+
+
+
