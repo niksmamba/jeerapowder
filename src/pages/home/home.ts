@@ -5,6 +5,7 @@ import { ChefProfilePage } from '../chef-profile/chef-profile';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { HttpClient } from '@angular/common/http';
 import { SignupPage } from '../signup/signup';
+import { OtpInputPanelPage } from '../otp-input-panel/otp-input-panel';
 
 @Component({
   selector: 'page-home',
@@ -62,8 +63,11 @@ export class HomePage {
 
   openOTPinputPanel(){
     console.log('inside openOTPinputPanel');
-    const myfilterPage=this.modal.create('OtpInputPanelPage');
-    myfilterPage.present();
+    this.navCtrl.push(OtpInputPanelPage);
+    //const myfilterPage=this.modal.create('OtpInputPanelPage');
+    //myfilterPage.present();
+    
   }
+
   
 }

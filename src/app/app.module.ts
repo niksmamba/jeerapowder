@@ -22,6 +22,7 @@ import { UserProfilePage } from '../pages/user-profile/user-profile';
 import { BookingsPage } from '../pages/bookings/bookings';
 import { UserInputsPage } from '../pages/user-inputs/user-inputs';
 import { GooglePlacesAutocompleteComponentModule } from 'ionic2-google-places-autocomplete';
+import { OtpInputPanelPage } from '../pages/otp-input-panel/otp-input-panel';
 
 
 
@@ -40,7 +41,8 @@ import { GooglePlacesAutocompleteComponentModule } from 'ionic2-google-places-au
     AboutPage,
     UserProfilePage,
     BookingsPage,
-    UserInputsPage
+    UserInputsPage,
+    OtpInputPanelPage
     
   ],
   imports: [
@@ -62,7 +64,8 @@ import { GooglePlacesAutocompleteComponentModule } from 'ionic2-google-places-au
     AboutPage,
     UserProfilePage,
     BookingsPage,
-    UserInputsPage
+    UserInputsPage,
+    OtpInputPanelPage
   ],
   providers: [
     StatusBar,

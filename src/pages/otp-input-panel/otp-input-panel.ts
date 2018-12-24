@@ -28,6 +28,7 @@ export class OtpInputPanelPage {
   }
   verifyOTP(){
     console.log('OTP verified');
+    this.navCtrl.popToRoot();
     this.navCtrl.push(SignupPage);
     
   }
