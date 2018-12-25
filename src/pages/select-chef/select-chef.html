@@ -1,60 +1,86 @@
 
 <ion-header>
     <ion-navbar>
-      <ion-buttons start>
-        
-      </ion-buttons>
-      <ion-title>Select Chef</ion-title>
-      <ion-buttons end>
-        <button ion-button icon-only>
-          <ion-icon name="settings"></ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
-
+        <ion-buttons start>
+          
+        </ion-buttons>
+        <ion-title>Select Chef</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only>
+            <ion-icon name="settings"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+</ion-header>
 
 <ion-content padding>
 
     <ion-segment [(ngModel)]="availableChefs">
-        <ion-segment-button value="Price">
+        <ion-segment-button value="Price" (click)="sortByPrice()">
           Price
         </ion-segment-button>
-        <ion-segment-button value="AvgRating">
+        <ion-segment-button value="AvgRating" (click)="sortByAverageRating()">
           Rating
         </ion-segment-button>
-        <ion-segment-button value="Recommended">
-          Recommended
-          </ion-segment-button>
-      </ion-segment>
-
-        <ion-card (click)="navigateToChefProfile(item.id)" *ngFor="let item of items">
-
-          <ion-item>
-            <ion-avatar item-start>
-              <img [src]="item.thumbnailUrl">
-            </ion-avatar>
-            <ion-row>
-              <ion-col><h2>{{item.FullName}}</h2></ion-col>
-              <ion-col><div align="right">&#8377;{{item.bookingCost}}</div></ion-col>
-            </ion-row>      
-            <p>Average Rating {{item.AverageRating}} ({{item.totalReviews}})</p>
-            {{item.tltle}}
-          </ion-item>        
-          <ion-card-content>
-            <p>Best Preperations</p>
-            <ion-list *ngFor="let prep of item.bestPreperations">
-                <button ion-item>
-                    <ion-avatar item-start>
-                        <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+    </ion-segment>
+          <div [ngSwitch]="availableChefs">
+            <ion-list *ngSwitchCase = "'Price'">
+                <ion-card *ngFor="let item of items">
+                    <ion-item>
+                      <ion-avatar item-start>
+                        <img [src]="item.thumbnailUrl">
                       </ion-avatar>
-                  {{prep.prepName}}
-                </button>
-              </ion-list>
-              <div align="right"><button ion-button small>Quick Book</button></div>
-    
-          </ion-card-content>
-        </ion-card>
+                      <ion-row>
+                        <ion-col><h2>{{item.FullName}}</h2></ion-col>
+                        <ion-col><div align="right">&#8377;{{item.bookingCost}}</div></ion-col>
+                      </ion-row>      
+                      <p>Average Rating {{item.AverageRating}} ({{item.totalReviews}})</p>
+                      {{item.tltle}}
+                    </ion-item>        
+                    <ion-card-content>
+                      <p>Best Preperations</p>
+                      <ion-list *ngFor="let prep of item.bestPreperations">
+                          <button ion-item>
+                              <ion-avatar item-start>
+                                  <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                                </ion-avatar>
+                            {{prep.prepName}}
+                          </button>
+                        </ion-list>
+                        <div align="right"><button ion-button small (click)="navigateToChefProfile(item.id)">Quick Book</button></div>
+              
+                    </ion-card-content>
+                  </ion-card>
+            </ion-list>
+            <ion-list *ngSwitchCase = "'AvgRating'">
+                <ion-card *ngFor="let item of items">
+                    <ion-item>
+                      <ion-avatar item-start>
+                        <img [src]="item.thumbnailUrl">
+                      </ion-avatar>
+                      <ion-row>
+                        <ion-col><h2>{{item.FullName}}</h2></ion-col>
+                        <ion-col><div align="right">&#8377;{{item.bookingCost}}</div></ion-col>
+                      </ion-row>      
+                      <p>Average Rating {{item.AverageRating}} ({{item.totalReviews}})</p>
+                      {{item.tltle}}
+                    </ion-item>        
+                    <ion-card-content>
+                      <p>Best Preperations</p>
+                      <ion-list *ngFor="let prep of item.bestPreperations">
+                          <button ion-item>
+                              <ion-avatar item-start>
+                                  <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                                </ion-avatar>
+                            {{prep.prepName}}
+                          </button>
+                        </ion-list>
+                        <div align="right"><button ion-button small (click)="navigateToChefProfile(item.id)">Quick Book</button></div>
+                    </ion-card-content>
+                  </ion-card>
+            </ion-list>
+          </div>
+
         <ion-fab bottom right>
             <button ion-fab mini color="primary" (click)="openFilterPage()">
               <ion-icon name="funnel" ></ion-icon>
@@ -62,3 +88,4 @@
         </ion-fab>
 
 </ion-content>
+

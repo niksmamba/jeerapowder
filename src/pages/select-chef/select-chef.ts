@@ -20,8 +20,26 @@ import { ChefProfilePage } from '../chef-profile/chef-profile';
 export class SelectChefPage {
 
   public items:any;
+  availableChefs: string = "Price";
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient,  private modal:ModalController ){
     this.getData();
+  }
+
+
+  sortByPrice(){
+    console.log('in Price sort');
+    // this.descending = !this.descending;
+    // this.order = this.descending ? 1 : -1;
+    this.items.sort(
+      function(a,b) {
+        return (a.bookingCost < b.bookingCost) ? -1 : (a.bookingCost > b.bookingCost) ? 1 : 0 ;});
+  }
+
+  sortByAverageRating(){
+    console.log('in Average Rating sort')
+    this.items.sort(
+      function(a,b) {
+        return (a.AverageRating > b.AverageRating) ? -1 : (a.AverageRating < b.AverageRating) ? 1 : 0 ;});
   }
 
   ionViewDidLoad() {

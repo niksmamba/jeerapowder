@@ -19,20 +19,18 @@
 
 
 <ion-content padding>
-
-    <ion-card>
-        <ion-card-header>
-          Select Price Range
-        </ion-card-header>
-        <ion-card-content>
+    
+          <ion-list>
             <ion-item>
-            <ion-range [(ngModel)]="priceRange">
-              <ion-icon range-left small name="cash"></ion-icon>
-              <ion-icon range-right name="cash"></ion-icon>
+            <ion-range [(ngModel)]="priceRange" min="100" max="1000" color="secondary">
+              <!-- <ion-icon range-left small name="cash"></ion-icon>
+              <ion-icon range-right name="cash"></ion-icon> -->
+              <ion-label range-left>100</ion-label>
+              <ion-label range-right>1000</ion-label>
             </ion-range>
           </ion-item>
-        </ion-card-content>
-      </ion-card>
+        </ion-list>
+      
       <ion-card>
           <ion-card-header>
             Other Filters

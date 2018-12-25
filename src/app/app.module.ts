@@ -14,6 +14,7 @@ import { ChefProfilePage } from '../pages/chef-profile/chef-profile';
 import { BookingDetailsPage } from '../pages/booking-details/booking-details';
 import { CostBreakupPage } from '../pages/cost-breakup/cost-breakup';
 import { ConfirmationPage } from '../pages/confirmation/confirmation';
+import { SortPipe } from '../pipes/sort/sort';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
     ChefProfilePage,
     BookingDetailsPage,
     CostBreakupPage,
-    ConfirmationPage
+    ConfirmationPage,
+    SortPipe
     
   ],
   imports: [
