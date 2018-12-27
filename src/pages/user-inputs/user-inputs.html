@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar >
+    <ion-title>User Inputs</ion-title>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- Hardcoding latlang for central banglore -->
+    <google-places-autocomplete (callback)="detail($event[0])" location= 12.9716,77.5946 key="AIzaSyCi8FLrISnMd-t7nG_846T-Ls6ah5GgiFY"></google-places-autocomplete>
+ 
+    <ion-item>
+          <ion-label>Time</ion-label>
+          <ion-datetime displayFormat="MMM-DD, h:mm A" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      <br><br>
+      <button ion-button block (click)="searchNearbyChefs()">Search Chefs</button>
+
+</ion-content>

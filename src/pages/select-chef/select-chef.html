@@ -1,18 +1,17 @@
 
 <ion-header>
     <ion-navbar>
-        <ion-buttons start>
-          
-        </ion-buttons>
-        <ion-title>Select Chef</ion-title>
-        <ion-buttons end>
-          <button ion-button icon-only>
-            <ion-icon name="settings"></ion-icon>
-          </button>
-        </ion-buttons>
-      </ion-navbar>
-</ion-header>
-
+      <ion-buttons start>
+      </ion-buttons>
+      <ion-title>Select Chef</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="navigateToRoot()">
+          <ion-icon name="home" ></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
 <ion-content padding>
 
     <ion-segment [(ngModel)]="availableChefs">

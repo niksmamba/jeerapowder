@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,39 +15,67 @@ import { CostBreakupPage } from '../pages/cost-breakup/cost-breakup';
 import { ConfirmationPage } from '../pages/confirmation/confirmation';
 import { SortPipe } from '../pipes/sort/sort';
 
+import { SignupPage } from '../pages/signup/signup';
+
+import { GooglePlus } from '@ionic-native/google-plus';
+import { AboutPage } from '../pages/about/about';
+import { UserProfilePage } from '../pages/user-profile/user-profile';
+import { BookingsPage } from '../pages/bookings/bookings';
+import { UserInputsPage } from '../pages/user-inputs/user-inputs';
+import { GooglePlacesAutocompleteComponentModule } from 'ionic2-google-places-autocomplete';
+import { OtpInputPanelPage } from '../pages/otp-input-panel/otp-input-panel';
+
+
+
+
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     SelectChefPage,
     ChefProfilePage,
     BookingDetailsPage,
     CostBreakupPage,
     ConfirmationPage,
+<<<<<<< HEAD
     SortPipe
+=======
+    SignupPage,
+    AboutPage,
+    UserProfilePage,
+    BookingsPage,
+    UserInputsPage,
+    OtpInputPanelPage
+>>>>>>> upstream/master
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
-    
+    IonicModule.forRoot(MyApp),
+    GooglePlacesAutocompleteComponentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     SelectChefPage,
     ChefProfilePage,
     BookingDetailsPage,
     CostBreakupPage,
-    ConfirmationPage
+    ConfirmationPage,
+    SignupPage,
+    AboutPage,
+    UserProfilePage,
+    BookingsPage,
+    UserInputsPage,
+    OtpInputPanelPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GooglePlus,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
