@@ -38,16 +38,13 @@ import { OtpInputPanelPage } from '../pages/otp-input-panel/otp-input-panel';
     BookingDetailsPage,
     CostBreakupPage,
     ConfirmationPage,
-<<<<<<< HEAD
-    SortPipe
-=======
+    SortPipe,
     SignupPage,
     AboutPage,
     UserProfilePage,
     BookingsPage,
     UserInputsPage,
     OtpInputPanelPage
->>>>>>> upstream/master
     
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController } from 'ionic-angular';
+import { IonicPage, ViewController, NavController, NavParams } from 'ionic-angular';
+import { SelectChefPage } from '../select-chef/select-chef';
 
 /**
  * Generated class for the FilterPage page.
@@ -15,7 +16,12 @@ import { IonicPage, ViewController } from 'ionic-angular';
 })
 export class FilterPage {
 
-  constructor(private view: ViewController) {
+  rating : any;
+  priceRange : any;
+
+
+  constructor(private view: ViewController, public navCtrl: NavController, 
+                public params: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -26,6 +32,13 @@ export class FilterPage {
     console.log('here 3')
     this.view.dismiss();
 
+  }
+  onApplyFilters(){
+    let inputData= {
+      rating : this.rating,
+      priceRange : this.priceRange
+    }
+    this.navCtrl.push(SelectChefPage,inputData);
   }
 
 }

@@ -20,9 +20,59 @@ export class ChefProfilePage {
 
 
   items: any;
+  chefId : any;
+  Specialities : string = "Veg";
+  sliderNonVeg = [
+    {
+      title: 'Butter Chicken',
+      image: "assets/imgs/Butter_chicken_recipe.jpg"
+    },
+    {
+      title: 'Chicken Tikka masala',
+      image: "assets/imgs/Chicken_tikka_masala.jpg"
+    },
+    {
+      title: 'Chicken Shahi',
+      image: "assets/imgs/butter_chicken_1.jpg"
+    }
+  ];
+
+  sliderVeg = [
+    {
+      title: 'Paneer Handi',
+      image: "assets/imgs/paneer handi.jpg"
+    },
+    {
+      title: 'Navratan Korma',
+      image: "assets/imgs/navratan_korma.jpg"
+    },
+    {
+      title: 'Butter Paneer',
+      image: "assets/imgs/paneer butter masala.jpg"
+    }
+  ];
+
+  sliderDessert = [
+    {
+      title: 'Badam Kheer',
+      image: "assets/imgs/Badam_Kheer_Recipe_Indian_Spiced_Almond_Milk-1.jpg"
+    },
+    {
+      title: 'Rasgulla',
+      image: "assets/imgs/rasgulla.jpg"
+    },
+    {
+      title: 'Gulab Jamun',
+      image: "assets/imgs/Gulab Jamun.jpg"
+    }
+  ];
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
       this.getChefProfile(navParams.get('chefId'));
+      this.chefId = this.navParams.get('chefId');
     console.log(navParams.get('chefId'));
+    console.log(this.items);
   }
 
   ionViewDidLoad() {
@@ -39,10 +89,16 @@ export class ChefProfilePage {
       //console.log(result);
     }); 
   }
+  showProfile(chefId, elementId){
+    console.log(chefId, elementId);
+    if(chefId == elementId)
+    return true;
+  }
   navigateToBookingPage(){
     console.log('hi 3');
     this.navCtrl.push(BookingDetailsPage);
   }
+
   navigateToRoot(){
     console.log('Navigating to Inputs Page')
     this.navCtrl.popToRoot();

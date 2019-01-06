@@ -22,7 +22,7 @@
     
           <ion-list>
             <ion-item>
-            <ion-range [(ngModel)]="priceRange" min="100" max="1000" color="secondary">
+            <ion-range min="100" max="1000"  [(ngModel)]="priceRange"pin ="true" color="secondary">
               <!-- <ion-icon range-left small name="cash"></ion-icon>
               <ion-icon range-right name="cash"></ion-icon> -->
               <ion-label range-left>100</ion-label>
@@ -46,11 +46,11 @@
                   </ion-item>
               
                   <ion-item>
-                    <ion-label>Average Rating</ion-label>
+                    <ion-label>Sort By Price</ion-label>
                     <ion-select [(ngModel)]="rating" interface="popover">
-                        <ion-option value="a5">Above 5</ion-option>
-                        <ion-option value="a4">Above 4</ion-option>
-                        <ion-option value="a3">Above 3</ion-option>
+                        <ion-option value="highToLow">High To Low</ion-option>
+                        <ion-option value="lowToHigh">Low To High</ion-option>
+                        <!-- <ion-option value="a2">Above 2</ion-option> -->
                         
                       </ion-select>
                   </ion-item>
@@ -89,7 +89,7 @@
                 </ion-list>
           </ion-card-content>
         </ion-card>
-      <ion-footer><button ion-button full bottom>Apply Filters</button></ion-footer>
+      <ion-footer><button ion-button full bottom (click)="onApplyFilters()">Apply Filters</button></ion-footer>
       
 
     

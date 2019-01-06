@@ -11,6 +11,17 @@ page-chef-profile {
       p {
         color: #444;
       }
+      //Grid
+      ion-grid{
+        ion-card{
+            width:100%;
+            margin-left:0 !important;
+            margin-right:0 !important;
+            ion-card-content{
+                padding: 0 !important; 
+            }
+        }
+    }
       // Cover image
       #profile-bg {
         position: absolute;
@@ -57,8 +68,13 @@ page-chef-profile {
       hr {
         border: 0;
         height: 1px;
-        background: #444;
+        background: rgb(12, 175, 53);
         background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, rgb(188, 198, 214) 50%, hsla(0, 0%, 0%, 0) 100%);
+      }
+
+      .overflow-me{
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
     
